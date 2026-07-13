@@ -6,7 +6,6 @@
     neovim
     brave
     kitty
-    home-manager
     git
   ];
 }
