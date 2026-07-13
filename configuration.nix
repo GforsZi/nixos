@@ -15,6 +15,7 @@
       ./modules/networking.nix
       ./modules/users.nix
       ./modules/packages.nix
+      ./modules/hardware.nix
     ];
 
   # Bootloader.
