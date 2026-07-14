@@ -7,21 +7,37 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
-  {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+  outputs = { self, nixpkgs, home-manager, spicetify-nix, ... }@inputs:
+  let
+    mkHost = hostname: system: username: homeProfile: nixpkgs.lib.nixosSystem {
+      inherit system;
+      specialArgs = { inherit inputs; };
       modules = [
-        ./configuration.nix
+        ./hosts/${hostname}
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.gfors = import ./home/default.nix;
+          home-manager.extraSpecialArgs = {
+            inherit spicetify-nix;
+            inherit inputs;
+          };
+          home-manager.users.${username} = import homeProfile;
         }
       ];
     };
+
+  in
+  {
+    nixosConfigurations = {
+      tbook = mkHost "tbook" "x86_64-linux" "gfors" ./home/profiles/tbook.nix;
+      };
   };
 }

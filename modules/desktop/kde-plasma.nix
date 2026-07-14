@@ -8,4 +8,6 @@
     layout = "us";
     variant = "";
   };
+
+  programs.kdeconnect.enable = true;
 }

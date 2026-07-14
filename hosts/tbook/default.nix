@@ -8,14 +8,17 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/boot.nix
-      ./modules/nix-settings.nix
-      ./modules/desktop.nix
-      ./modules/audio.nix
-      ./modules/networking.nix
-      ./modules/users.nix
-      ./modules/packages.nix
-      ./modules/hardware.nix
+
+      ../../modules/core/boot.nix
+      ../../modules/core/nix-settings.nix
+      ../../modules/core/networking.nix
+      ../../modules/core/users.nix
+      ../../modules/hardware/audio.nix
+      ../../modules/hardware/intel-graphics.nix
+      ../../modules/hardware/bluetooth.nix
+      ../../modules/desktop/kde-plasma.nix
+      ../../modules/common/packages.nix
+      ../../modules/services/ssh.nix
     ];
 
   # Bootloader.

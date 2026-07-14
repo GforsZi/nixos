@@ -3,9 +3,9 @@
 {
   environment.systemPackages = with pkgs; [
     wget
-    # neovim
-    brave
-    # kitty
+    curl
     git
+    fastfetch
+    btop
   ];
 }

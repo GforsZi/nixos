@@ -2,10 +2,8 @@
 
 {
   imports = [
-    ./shell/zsh.nix
-    ./shell/tmux.nix
-    ./editor/neovim.nix
-    ./terminal/kitty.nix
+    ../shared
+    ../gui
   ];
 
   home.stateVersion = "26.05";
