@@ -12,6 +12,7 @@
   ./dev/git.nix
   ./dev/nodejs.nix
   ./dev/php.nix
+  ./dev/go.nix
 
   ./editor/neovim.nix
   ];

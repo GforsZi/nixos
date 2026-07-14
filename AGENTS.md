@@ -3,7 +3,7 @@
 ## Rebuild
 
 ```sh
-sudo nixos-rebuild switch --flake /etc/nixos#nixos
+sudo nixos-rebuild switch --flake ~/nixos-config#tbook --impure
 ```
 
 Updates both NixOS system config and home-manager (user `gfors`) in one command.

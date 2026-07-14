@@ -24,7 +24,7 @@
     '';
 
     initExtra = ''
-      source ~/.zsh-custom/tmux_autostart.sh
+      source ~/.zsh-custom/tmux-autostart.sh
     '';
 
     shellAliases = {
@@ -42,5 +42,5 @@
   ];
 
   home.file.".p10k.zsh".source = "${config.home.homeDirectory}/dotfiles/zsh/.p10k.zsh";
-  home.file.".zsh-custom/tmux_autostart.sh".source = ./scripts/tmux_autostart.sh;
+  home.file.".zsh-custom/tmux-autostart.sh".source = ./scripts/tmux-autostart.sh;
 }

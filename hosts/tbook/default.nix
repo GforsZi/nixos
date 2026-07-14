@@ -19,6 +19,8 @@
       ../../modules/desktop/kde-plasma.nix
       ../../modules/common/packages.nix
       ../../modules/services/ssh.nix
+      ../../modules/services/docker.nix
+      ../../modules/services/mysql.nix
     ];
 
   # Bootloader.
