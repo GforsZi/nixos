@@ -5,6 +5,7 @@
     wget
     curl
     git
+    stow
     fastfetch
     btop
   ];

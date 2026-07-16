@@ -16,11 +16,12 @@
       ../../modules/hardware/audio.nix
       ../../modules/hardware/intel-graphics.nix
       ../../modules/hardware/bluetooth.nix
-      ../../modules/desktop/kde-plasma.nix
+      ../../modules/desktop/hyprland.nix
       ../../modules/common/packages.nix
       ../../modules/services/ssh.nix
       ../../modules/services/docker.nix
       ../../modules/services/mysql.nix
+      ../../modules/services/flatpak.nix
     ];
 
   # Bootloader.
