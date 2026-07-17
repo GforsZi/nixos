@@ -21,12 +21,16 @@
     grim
     slurp
     wl-clipboard
+    calc
+    unzip
     thunar
     thunar-archive-plugin
     papirus-icon-theme
     lxappearance
     bibata-cursors
     wlogout
+    sddm-astronaut
+    polkit_gnome
   ];
 
   xdg.portal = {
@@ -37,7 +41,22 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
+    theme = "sddm-astronaut-theme";
+    settings = {
+      Theme = {
+        CursorTheme = "Bibata-Modern-Ice";
+        CursorSize = 20;
+      };
+    };
+    extraPackages = with pkgs; [
+      kdePackages.qtmultimedia
+      kdePackages.qtsvg
+      kdePackages.qt5compat
+      ];
   };
+
+  security.pam.services.hyprlock = {};
+  programs.hyprlock.enable = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
@@ -49,11 +68,13 @@
     lidSwitchExternalPower = "lock";
     settings = {
       Login = {
-        IdleAction = "suspend";
-        IdleActionSec = "15min";
+        IdleAction = "lock";
+        IdleActionSec = "5min";
       };
     };
   };
 
   programs.dconf.enable = true;
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
 }

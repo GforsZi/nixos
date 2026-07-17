@@ -9,6 +9,7 @@
       vulkan-loader
       vulkan-validation-layers
       vpl-gpu-rt
+      libvdpau-va-gl
     ];
   };
 
