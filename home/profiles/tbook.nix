@@ -9,6 +9,7 @@
   ../shared/apps/tor-browser.nix
   ../shared/apps/mpv.nix
   ../shared/apps/obs.nix
+  ../shared/apps/gimp.nix
 
   ../shared/shell/tmux.nix
   ../shared/shell/zsh.nix
@@ -18,6 +19,8 @@
   ../shared/cli_tools/opencode.nix
   ../shared/cli_tools/yazi.nix
   ../shared/cli_tools/ffmpeg.nix
+  ../shared/cli_tools/ngrok.nix
+  ../shared/cli_tools/posting.nix
 
   ../shared/dev/direnv.nix
   ../shared/dev/gcc.nix
@@ -25,6 +28,7 @@
   ../shared/dev/nodejs.nix
   ../shared/dev/php.nix
   ../shared/dev/go.nix
+  ../shared/dev/python.nix
 
   ../shared/editor/neovim.nix
   ];

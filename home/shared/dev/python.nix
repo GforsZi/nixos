@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    php84
-    php84Packages.composer
+    python3
+    python3Packages.pip
   ];
 }
