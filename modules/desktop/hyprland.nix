@@ -12,6 +12,7 @@
         mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
     }))
     mako
+    libnotify
     awww
     rofi
     wireplumber

@@ -3,8 +3,8 @@
 {
   hardware.bluetooth = {
     enable = true;
-    powerOnBoot = true;  # otomatis nyala saat boot, tidak perlu enable manual tiap kali
+    powerOnBoot = true;
   };
 
-  services.blueman.enable = true;  # GUI tray untuk pairing device
+  services.blueman.enable = true;
 }
